@@ -1,0 +1,367 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Montserrat,Arial,sans-serif;background:#f8f9fa;color:#0f2a4a;line-height:1.6}
+
+/* Estilos de Logo */
+.brand{display:flex;align-items:center;text-decoration:none;margin-right:auto}
+.brand-logo{height:58px;width:auto;object-fit:contain;border-radius:8px;transition:transform .2s ease}
+.brand-logo:hover{transform:scale(1.03)}
+.footer-logo{height:50px;background:#fff;padding:4px;border-radius:8px}
+
+.navbar{height:78px;background:#fff;display:flex;align-items:center;padding:0 6%;gap:28px;position:sticky;top:0;z-index:50;box-shadow:0 2px 15px #00000012}
+nav{display:flex;gap:24px}
+nav a{color:#0f2a4a;text-decoration:none;font-weight:600;font-size:13px}
+nav a:hover{color:#0091d5}
+.theme-btn,.menu-toggle{border:0;background:none;font-size:22px;color:#0f2a4a;cursor:pointer}
+.menu-toggle{display:none}
+
+.hero{min-height:650px;padding:75px 7%;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;background:linear-gradient(120deg,#eef7f1,#e8f7fb)}
+.eyebrow{color:#1e5631;font-size:12px;font-weight:800;letter-spacing:1.8px}
+.hero h1{font-size:clamp(38px,5vw,67px);line-height:1.08;margin:15px 0 20px}
+.hero h1 span{color:#1e5631}
+.hero p{font-size:18px;max-width:650px;color:#496175}
+.hero-actions{display:flex;gap:12px;margin:30px 0}
+.btn{border:0;border-radius:10px;padding:14px 21px;font-weight:800;cursor:pointer;font-family:inherit;text-decoration:none;display:inline-block}
+.primary{background:#1e5631;color:#fff}
+.primary:hover{background:#174326}
+.secondary{background:#fff;color:#1e5631;border:2px solid #1e5631}
+.hero-stats{display:flex;gap:40px}
+.hero-stats b{display:block;font-size:25px}
+.hero-stats small{color:#667}
+
+.hero-visual{display:flex;justify-content:center}
+.hero-card{width:min(470px,100%);height:430px;border-radius:35px;position:relative;overflow:hidden;background:#fff;box-shadow:0 25px 60px #0f2a4a30;display:flex;align-items:center;justify-content:center;padding:40px}
+.hero-logo-img{max-width:85%;max-height:85%;object-fit:contain}
+.hero-badge{position:absolute;bottom:22px;left:22px;background:#1e5631;color:#fff;padding:10px 17px;border-radius:30px;font-weight:800;z-index:5}
+
+.section{padding:85px 7%;max-width:1400px;margin:auto}
+.quick-search{background:#fff;max-width:1180px;margin:-35px auto 0;position:relative;border-radius:18px;box-shadow:0 12px 40px #00000012;padding:30px;z-index:4}
+.quick-search h2{margin-top:5px}
+.filters{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:10px;margin-top:18px}
+.filters select,.contact input,.contact textarea,form select,form input{border:1px solid #d7e0e5;border-radius:9px;padding:13px;font:inherit;background:#fff;color:#0f2a4a}
+.section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:32px}
+.section-heading h2,.about h2,.passport h2,.business h2,.contact h2{font-size:38px;line-height:1.15;margin-top:8px}
+.text-link{color:#0091d5;text-decoration:none;font-weight:700}
+.destination-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.destination{background:#fff;border-radius:17px;overflow:hidden;box-shadow:0 8px 25px #0000000d;transition:.25s}
+.destination:hover{transform:translateY(-5px);box-shadow:0 15px 35px #00000018}
+.destination-photo{height:190px;display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:800;font-size:18px;background-size:cover;background-position:center;background-repeat:no-repeat}
+.destination-info{padding:17px}
+.destination-info h3{margin-bottom:4px}
+.destination-info p{font-size:13px;color:#667}
+.tags{display:flex;gap:5px;margin:12px 0;flex-wrap:wrap}
+.tag{font-size:10px;background:#e9f6fb;color:#087aa8;padding:4px 8px;border-radius:20px}
+.price{font-weight:800;color:#f0a500}
+
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.about-image{height:460px;border-radius:30px;background:linear-gradient(145deg,#1e5631,#0091d5);display:grid;place-items:center;overflow:hidden}
+.about-orb{font-size:150px;filter:drop-shadow(0 20px 20px #0004)}
+.about-text>p{margin:20px 0;color:#607080}
+.value-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.value-grid div{display:grid;grid-template-columns:40px 1fr;column-gap:10px}
+.value-grid span{font-size:27px;grid-row:span 2}
+.value-grid small{color:#70808d}
+
+.services{background:#f8f9fa}
+.centered{display:block;text-align:center}
+.centered p{color:#657683}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.service-card{background:#fff;padding:28px;border-radius:18px;box-shadow:0 8px 25px #0000000d;display:flex;flex-direction:column;align-items:flex-start}
+.service-card.featured{border:2px solid #1e5631;transform:translateY(-7px)}
+.service-icon{font-size:42px}
+.service-card h3{margin:12px 0 8px}
+.service-card p{color:#657683;font-size:14px;min-height:68px}
+.service-card strong{font-size:20px;color:#1e5631;margin:14px 0}
+.service-card button{border:0;background:#eaf5ee;color:#1e5631;padding:10px 15px;border-radius:8px;font-weight:800;cursor:pointer}
+
+.passport{max-width:none;background:#0f2a4a;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.passport .eyebrow{color:#66c8e7}
+.passport h2{font-size:42px}
+.passport-copy p{color:#c7d5df;margin:18px 0 25px}
+.level{margin-bottom:28px}
+.level-top{display:flex;justify-content:space-between;margin-bottom:9px;font-size:13px}
+.progress{height:11px;background:#ffffff25;border-radius:20px;overflow:hidden}
+.progress span{display:block;height:100%;background:#f3a712}
+.stamps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stamp{aspect-ratio:1;border:2px dashed #ffffff45;border-radius:50%;display:grid;place-items:center;color:#ffffff55;font-size:22px;font-weight:800;text-align:center}
+.stamp span{display:block;font-size:9px}
+.stamp.active{border-color:#f3a712;color:#f3a712}
+
+.business{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}
+.business p{color:#657683;margin:20px 0}
+.business-icons{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.business-icons span{background:#eaf5ee;border-radius:25px;min-height:150px;display:grid;place-items:center;font-size:70px}
+
+.contact{background:#fff}
+.contact form{max-width:700px;display:grid;gap:13px;margin-top:25px}
+.contact textarea{resize:vertical}
+
+footer{background:#091e35;color:#d5e0e7;padding:45px 7%;display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px;position:relative}
+.footer-brand{display:flex;gap:12px;align-items:center}
+.footer-brand p,footer p{font-size:12px;color:#9db0bd;margin-top:6px}
+.copyright{grid-column:1/-1;border-top:1px solid #ffffff1c;padding-top:20px;font-size:11px;color:#8ca0ae}
+
+.whatsapp{position:fixed;right:22px;bottom:22px;width:57px;height:57px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;text-decoration:none;font-size:29px;z-index:50;box-shadow:0 8px 25px #0003}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:100;place-items:center;padding:20px}
+.modal.open{display:grid}
+.modal-box{background:#fff;width:min(540px,100%);border-radius:20px;padding:32px;position:relative;max-height:90vh;overflow:auto}
+.close{position:absolute;right:18px;top:12px;border:0;background:none;font-size:28px;cursor:pointer}
+.modal-box h2{margin:8px 0 20px}
+.modal-box form{display:grid;gap:14px}
+.modal-box label{font-size:12px;font-weight:700;display:grid;gap:6px}
+
+
+
+
+.mochi-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 23, 37, 0.85);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.mochi-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mochi-welcome-layout {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  max-width: 850px;
+  transform: translateY(0) scale(1);
+  transition: transform 0.5s ease;
+}
+
+.mochi-overlay.hidden .mochi-welcome-layout {
+  transform: translateY(50px) scale(0.9);
+}
+
+.mochi-giant-avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #1e5631;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+.mochi-dialogue-box {
+  background: #fff;
+  border-radius: 25px;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.mochi-dialogue-box::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  transform: translateY(-50%);
+  border-width: 20px 25px 20px 0;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+}
+
+.mochi-dialogue-box h2 {
+  color: #1e5631;
+  margin-bottom: 12px;
+  font-size: 32px;
+}
+
+.mochi-dialogue-box p {
+  color: #496175;
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Widget Flotante de Mochi */
+.mochi-container {
+  position: fixed;
+  left: 22px;
+  bottom: 22px;
+  z-index: 60;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.mochi-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mochi-avatar {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 3px solid #1e5631;
+  background: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mochi-avatar:hover {
+  transform: scale(1.08) rotate(4deg);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mochi-bubble {
+  background: #fff;
+  color: #0f2a4a;
+  padding: 16px;
+  border-radius: 20px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  max-width: 270px;
+  position: relative;
+  border: 2px solid #eef7f1;
+  display: none;
+  animation: mochiPop 0.3s ease-out forwards;
+}
+
+.mochi-bubble.active {
+  display: block;
+}
+
+.mochi-bubble p {
+  font-size: 13px;
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.mochi-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #8a9ba8;
+}
+
+.mochi-actions button {
+  background: #eaf5ee;
+  color: #1e5631;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mochi-actions button:hover {
+  background: #1e5631;
+  color: #fff;
+}
+
+@keyframes mochiPop {
+  from { opacity: 0; transform: translateY(10px) scale(0.92); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Modo Oscuro */
+.dark{background:#0a1725;color:#e8f0f4}
+.dark .navbar,.dark .quick-search,.dark .destination,.dark .service-card,.dark .modal-box,.dark .contact{background:#102438;color:#e8f0f4}
+.dark nav a,.dark .brand,.dark .theme-btn{color:#e8f0f4}
+.dark .hero{background:linear-gradient(120deg,#102b31,#102438)}
+.dark .hero-card{background:#102438}
+.dark .quick-search select,.dark input,.dark textarea,.dark form select,.dark form input{background:#0b1d2d;color:#e8f0f4;border-color:#294254}
+.dark .about-image{background:linear-gradient(145deg,#153d28,#064d65)}
+.dark .services{background:#0a1725}
+.dark .destination-info p,.dark .service-card p,.dark .about-text>p,.dark .business p{color:#aebdc7}
+.dark .modal-box{box-shadow:0 20px 60px #0008}
+
+.dark .mochi-dialogue-box { background: #102438; }
+.dark .mochi-dialogue-box::before { border-right-color: #102438; }
+.dark .mochi-dialogue-box h2 { color: #e8f0f4; }
+.dark .mochi-dialogue-box p { color: #aebdc7; }
+.dark .mochi-bubble { background: #102438; color: #e8f0f4; border-color: #294254; }
+
+@media(max-width:1000px){
+  nav{gap:13px}
+  .destination-grid,.service-grid{grid-template-columns:repeat(2,1fr)}
+  .filters{grid-template-columns:1fr 1fr}
+  .filters .btn{grid-column:1/-1}
+  .hero{grid-template-columns:1fr}
+  .hero-visual{order:-1}
+  .about,.passport,.business{grid-template-columns:1fr}
+  .stamps{max-width:600px}
+}
+@media(max-width:750px){
+  .mochi-welcome-layout {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .mochi-giant-avatar {
+    width: 170px;
+    height: 170px;
+    border-width: 4px;
+  }
+  .mochi-dialogue-box::before {
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 20px 25px 20px;
+    border-color: transparent transparent #fff transparent;
+  }
+  .dark .mochi-dialogue-box::before {
+    border-color: transparent transparent #102438 transparent;
+  }
+}
+@media(max-width:700px){
+  .navbar{padding:0 5%}
+  .menu-toggle{display:block}
+  nav{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;padding:20px;flex-direction:column;box-shadow:0 10px 20px #0001}
+  .dark nav{background:#102438}
+  nav.open{display:flex}
+  .theme-btn{margin-left:0}
+  .hero{padding:55px 5%;min-height:auto}
+  .hero-card{height:330px}
+  .section{padding:60px 5%}
+  .quick-search{margin:0 5%;padding:22px}
+  .filters,.destination-grid,.service-grid{grid-template-columns:1fr}
+  .section-heading{display:block}
+  .section-heading .text-link{display:inline-block;margin-top:10px}
+  .about h2,.passport h2,.business h2,.contact h2{font-size:31px}
+  .about-image{height:300px}
+  .value-grid{grid-template-columns:1fr}
+  .passport{padding:60px 5%}
+  .stamps{grid-template-columns:repeat(4,1fr);gap:10px}
+  .business-icons span{min-height:100px;font-size:50px}
+  footer{grid-template-columns:1fr;padding:40px 5%}
+  .copyright{grid-column:auto}
+  .hero-stats{gap:20px}
+  .hero h1{font-size:39px}
+  .mochi-container {
+    bottom: 15px;
+    left: 15px;
+  }
+  .mochi-avatar {
+    width: 65px;
+    height: 65px;
+  }
+  .mochi-bubble {
+    max-width: 220px;
+  }
+}

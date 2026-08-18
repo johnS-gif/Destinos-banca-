@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos Provincias 360</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#inicio">
+      <img src="logo.jpeg" alt="Logo Destinos Provincias 360" class="brand-logo">
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav id="mainNav">
+      <a href="#inicio">Inicio</a>
+      <a href="#destinos">Destinos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#pasaporte">Pasaporte</a>
+      <a href="#emprendedores">Emprendedores</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button id="themeToggle" class="theme-btn" title="Cambiar modo">☾</button>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">🇨🇷 COSTA RICA OCULTA</span>
+        <h1>Descubrí lugares increíbles que <span>casi nadie conoce.</span></h1>
+        <p>Explorá destinos auténticos, económicos y llenos de naturaleza en las 7 provincias de Costa Rica.</p>
+        <div class="hero-actions">
+          <a href="#destinos" class="btn primary">Explorar provincias</a>
+          <button class="btn secondary" onclick="openRouteModal()">Diseñá tu ruta</button>
+        </div>
+        <div class="hero-stats">
+          <div><b>7</b><small>Provincias</small></div>
+          <div><b>100+</b><small>Destinos</small></div>
+          <div><b>360°</b><small>Experiencias</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <img src="logo.jpeg" alt="Destinos Provincias 360" class="hero-logo-img">
+          <div class="hero-badge">PURA VIDA</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-search section">
+      <div>
+        <span class="eyebrow">ENCONTRÁ TU PRÓXIMA AVENTURA</span>
+        <h2>¿Qué querés descubrir?</h2>
+      </div>
+      <div class="filters">
+        <select id="provinceFilter">
+          <option value="">Todas las provincias</option>
+          <option>San José</option><option>Alajuela</option><option>Cartago</option>
+          <option>Heredia</option><option>Guanacaste</option><option>Puntarenas</option><option>Limón</option>
+        </select>
+        <select id="priceFilter">
+          <option value="">Cualquier presupuesto</option>
+          <option value="Económico">Económico</option><option value="Medio">Medio</option>
+        </select>
+        <select id="typeFilter">
+          <option value="">Cualquier actividad</option>
+          <option value="Playa">Playa</option><option value="Montaña">Montaña</option>
+          <option value="Catarata">Catarata</option><option value="Cultura">Cultura</option>
+        </select>
+        <select id="peopleFilter">
+          <option value="">Personas</option><option>1</option><option>2</option><option>3-5</option><option>6+</option>
+        </select>
+        <button class="btn primary" onclick="filterDestinations()">Buscar</button>
+      </div>
+    </section>
+
+    <section class="section" id="destinos">
+      <div class="section-heading">
+        <div><span class="eyebrow">EXPLORÁ COSTA RICA</span><h2>Destinos destacados</h2></div>
+        <a href="#destinos" class="text-link">Ver todos →</a>
+      </div>
+      <div class="destination-grid" id="destinationGrid"></div>
+    </section>
+
+    <section class="about section">
+      <div class="about-image"><div class="about-orb">🌿</div></div>
+      <div class="about-text">
+        <span class="eyebrow">QUIÉNES SOMOS</span>
+        <h2>El Costa Rica que todavía no has descubierto.</h2>
+        <p>Destinos Provincias 360 conecta viajeros con rincones poco conocidos, emprendimientos locales y experiencias auténticas.</p>
+        <div class="value-grid">
+          <div><span>🌱</span><b>Turismo sostenible</b><small>Apoyamos comunidades rurales.</small></div>
+          <div><span>💰</span><b>Precios accesibles</b><small>Opciones para diferentes presupuestos.</small></div>
+          <div><span>🗺️</span><b>Experiencias reales</b><small>Destinos fuera de lo convencional.</small></div>
+          <div><span>🤝</span><b>Comercio local</b><small>Impulsamos pequeños negocios.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="servicios">
+      <div class="section-heading centered"><span class="eyebrow">CATÁLOGO</span><h2>Productos y servicios</h2><p>Todo lo necesario para convertir un viaje en una experiencia.</p></div>
+      <div class="service-grid">
+        <article class="service-card"><span class="service-icon">📖</span><h3>Costa Rica Oculta</h3><p>Guía digital con destinos secretos y recomendaciones.</p><strong>₡3.500</strong><button onclick="buy('Guía Costa Rica Oculta')">Adquirir</button></article>
+        <article class="service-card featured"><span class="service-icon">🧭</span><h3>Ruta personalizada</h3><p>Diseñamos un itinerario según tus gustos, fechas y presupuesto.</p><strong>Desde ₡7.500</strong><button onclick="openRouteModal()">Diseñar ruta</button></article>
+        <article class="service-card"><span class="service-icon">🎟️</span><h3>Pasaporte 360</h3><p>Coleccioná sellos, completá retos y subí de nivel.</p><strong>₡5.000</strong><button onclick="buy('Pasaporte Provincias 360')">Adquirir</button></article>
+        <article class="service-card"><span class="service-icon">🏞️</span><h3>Experiencias locales</h3><p>Paquetes con alimentación, actividades y aventura.</p><strong>Desde ₡18.000</strong><button onclick="buy('Experiencia local')">Consultar</button></article>
+      </div>
+    </section>
+
+    <section class="passport section" id="pasaporte">
+      <div class="passport-copy">
+        <span class="eyebrow">VIAJÁ · JUGÁ · DESCUBRÍ</span>
+        <h2>Convertí tus viajes en una aventura.</h2>
+        <p>Completá retos, visitá nuevas provincias y coleccioná sellos. Cada experiencia te acerca al siguiente nivel.</p>
+        <div class="level">
+          <div class="level-top"><span>🌿 Explorador Novato</span><b>650 / 1000 XP</b></div>
+          <div class="progress"><span style="width:65%"></span></div>
+        </div>
+        <button class="btn primary" onclick="alert('¡Sistema de retos próximamente!')">Ver mis retos</button>
+      </div>
+      <div class="stamps">
+        <div class="stamp active">SJ<span>San José</span></div>
+        <div class="stamp active">AL<span>Alajuela</span></div>
+        <div class="stamp">CA<span>Cartago</span></div>
+        <div class="stamp">HE<span>Heredia</span></div>
+        <div class="stamp">GU<span>Guanacaste</span></div>
+        <div class="stamp">PU<span>Puntarenas</span></div>
+        <div class="stamp">LI<span>Limón</span></div>
+      </div>
+    </section>
+
+    <section class="business section" id="emprendedores">
+      <div><span class="eyebrow">PARA EMPRENDEDORES</span><h2>Tu negocio también forma parte de la aventura.</h2><p>Promocioná tu soda, cabina, hotel, tour o emprendimiento frente a viajeros que buscan experiencias locales.</p><button class="btn primary" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Quiero formar parte</button></div>
+      <div class="business-icons"><span>🏡</span><span>🍛</span><span>🛶</span><span>🧑‍🌾</span></div>
+    </section>
+
+    <section class="section contact" id="contacto">
+      <div class="section-heading"><span class="eyebrow">HABLEMOS</span><h2>¿Tenés una pregunta?</h2><p>Escribinos y te ayudamos a encontrar tu próxima aventura.</p></div>
+      <form onsubmit="sendContact(event)">
+        <input required placeholder="Nombre">
+        <input required type="email" placeholder="Correo electrónico">
+        <textarea required rows="5" placeholder="¿En qué podemos ayudarte?"></textarea>
+        <button class="btn primary" type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="logo.jpeg" alt="Logo Destinos Provincias 360" class="brand-logo footer-logo">
+      <div>
+        <b>DESTINOS PROVINCIAS 360</b>
+        <p>Descubrí el Costa Rica que no conocías.</p>
+      </div>
+    </div>
+    <div><b>Contacto</b><p>info.destinoprovincias360.servicios@gmail.com</p><p>+506 6423 2835 · +506 7124 8314</p></div>
+    <div><b>Seguinos</b><p>Instagram · TikTok · Facebook</p></div>
+    <div class="copyright">© 2026 Destinos Provincias 360 · Todos los derechos reservados.</div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/50664232835" target="_blank" aria-label="WhatsApp">✆</a>
+
+  <div class="modal" id="routeModal">
+    <div class="modal-box">
+      <button class="close" onclick="closeRouteModal()">×</button>
+      <span class="eyebrow">RUTA PERSONALIZADA</span><h2>Diseñemos tu aventura</h2>
+      <form onsubmit="submitRoute(event)">
+        <label>Provincia<select required><option value="">Seleccioná</option><option>San José</option><option>Alajuela</option><option>Cartago</option><option>Heredia</option><option>Guanacaste</option><option>Puntarenas</option><option>Limón</option></select></label>
+        <label>Presupuesto<input required type="number" min="1" placeholder="₡"></label>
+        <label>Personas<input required type="number" min="1" placeholder="Cantidad"></label>
+        <label>Fecha<input required type="date"></label>
+        <label>¿Qué te gusta?<input placeholder="Playa, montaña, comida, aventura..."></label>
+        <button class="btn primary" type="submit">Solicitar mi ruta</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="mochi-overlay" id="mochiOverlay">
+    <div class="mochi-welcome-layout">
+      <img src="mochi.jpeg" alt="Mochi" class="mochi-giant-avatar">
+      <div class="mochi-dialogue-box">
+        <h2>¡Hola, soy Mochi! 🦥</h2>
+        <p>Bienvenido a Destinos Provincias 360. Estoy aquí para acompañarte a descubrir lo que tenemos para ofrecerte, nuestro objetivo es que descubras rincones increíbles y poco conocidos de Costa Rica. Te voy a dar consejos y datos curiosos mientras exploras la página.</p>
+        <button class="btn primary" onclick="startMochi()">¡Empezar la aventura!</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mochi-container" id="mochiWidget" style="display: none;">
+    <div class="mochi-bubble" id="mochiBubble">
+      <button class="mochi-close" onclick="toggleMochiBubble(event)">×</button>
+      <p id="mochiText">¡Aquí estoy! Toca el botón de abajo si quieres un dato curioso.</p>
+      <div class="mochi-actions">
+        <button onclick="nextMochiTip()">Siguiente curiosidad 💡</button>
+      </div>
+    </div>
+    <img src="mochi.jpeg" alt="Mochi" class="mochi-avatar" id="mochiAvatar" onclick="toggleMochiBubble(event)">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
