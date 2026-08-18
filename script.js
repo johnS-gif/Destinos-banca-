@@ -6,7 +6,15 @@ const destinations = [
   {name:"Los Quetzales", province:"San José", type:"Montaña", price:"Económico", desc:"Paisajes de altura y biodiversidad.", img:"Quetzales.jpeg"},
   {name:"Poza La Selva", province:"Heredia", type:"Catarata", price:"Económico", desc:"Un rincón verde para desconectarse.", img:"Poza.jpeg"},
   {name:"Isla Chira", province:"Puntarenas", type:"Cultura", price:"Medio", desc:"Comunidad, manglares y cultura local.", img:"Chira.jpeg"},
-  {name:"Pueblos de Sarchí", province:"Alajuela", type:"Cultura", price:"Económico", desc:"Artesanía y tradiciones costarricenses.", img:"Sarchi.jpeg"}
+  {name:"Pueblos de Sarchí", province:"Alajuela", type:"Cultura", price:"Económico", desc:"Artesanía y tradiciones costarricenses.", img:"Sarchi.jpeg"},
+  {name:"Río Agrio", province:"Alajuela", type:"Catarata", price:"Económico", desc:"Río con tonos celestes y senderos mágicos.", img:"agrio.jpg"},
+  {name:"Playa Minas", province:"Guanacaste", type:"Playa", price:"Económico", desc:"Arena blanca y aguas cristalinas sin tantas multitudes.", img:"mina.jpg"},
+  {name:"Cerro Pelado", province:"Guanacaste", type:"Montaña", price:"Medio", desc:"Vistas espectaculares ideales para disfrutar el atardecer.", img:"pelado.jpg"},
+  {name:"Ruinas de Ujarrás", province:"Cartago", type:"Cultura", price:"Económico", desc:"Historia rodeada de jardines perfectos para pasar la tarde.", img:"ujarras.jpeg"},
+  {name: 'Llanos de Cortés', province: 'Guanacaste', type: 'Catarata', price: 'Económico', desc: 'Un oasis escondido con una caída de agua espectacular.', img: 'llanos.jpg'},
+  {name: 'Tesoro Escondido', province: 'Alajuela', type: 'Catarata', price: 'Económico', desc: 'Agua de color celeste intenso escondida entre las montañas.', img: 'escondido.jpeg'},
+  {name: 'Laguna Don Manuel', province: 'San José', type: 'Montaña', price: 'Económico', desc: 'Un bosque de pinos y una laguna perfecta para hacer picnic.', img: 'donmanuel.jpeg'},
+  {name: 'Playa San Juanillo', province: 'Guanacaste', type: 'Playa', price: 'Económico', desc: 'Playa de arena blanca con forma de media luna y aguas tranquilas.', img: 'juanillo.jpeg'}
 ];
 
 function renderDestinations(items=destinations){
